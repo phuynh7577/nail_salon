@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nail Salon</title>
+</head>
+<body>
+
+    <form action="/home" method="POST">
+        <input type="text" name="typeOfService" placeholder="Services" />
+        <input type="number" name="price" placeholder="Pricing" />
+        <input type="submit" name="" value="Submit" />
+    </form>
+
+    <ul>
+        <% for(let i = 0; i < Services.length; i++){ %>
+        <li>
+            <%= Services[i].typeOfService; %>
+            <%= Services[i].price; %>
+        </li>
+        <% } %>
+        </ul>
+
+
+
+
+<div class="services">
+
+</div>
+
+
+
+
+
+    
+</body>
+</html>

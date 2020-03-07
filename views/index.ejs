@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+  
+
+  <% if(currentUser) { %>
+  <main>
+    Welcome to the <a href="/app">party</a>
+  </main>
+  <% } %>
+  
+  
+  <nav>
+      <a href="/home">Nail Salon</a>
+      <a href="/home ">Gallery</a>
+      <a href="/home ">Services</a>
+      <a href="/home ">Brands</a>
+  </nav>
+
+
+<footer>
+    <% if(!currentUser) { %>
+      <a href="/sessions/new">Admin</a>
+    <% } %>
+
+    <% if(currentUser) { %>
+      <a href="/users/new">New Account</a>
+    <% } %>
+
+    <% if(currentUser) { %>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Logout" />
+      </form>
+    <% } %>
+</footer>
+
+</body>
+
+</html>
