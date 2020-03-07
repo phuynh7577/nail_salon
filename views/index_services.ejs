@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Nail Salon</title>
+</head>
+
+<body>
+  <h1>Services</h1>
+  <a href="/home">Home</a>
+
+  <ul>
+    <% for(let i = 0; i < Services.length; i++){ %>
+    <li>
+      <a href="/home/services/<%=Services[i].id; %>"> <%=Services[i].typeOfService; %> </a> 
+        <p>$<%= Services[i].price %></p> 
+    </li>
+    <% } %>
+  </ul>
+</body>
+
+</html>

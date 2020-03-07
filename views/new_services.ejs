@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    
     <title>Nail Salon</title>
 </head>
 <body>
+    
+    <a href="/home">Home</a>
+    <a href="/home/index/services">View</a>
 
     <form action="/home" method="POST">
         <input type="text" name="typeOfService" placeholder="Services" />
@@ -14,26 +22,30 @@
         <input type="submit" name="" value="Submit" />
     </form>
 
-    <ul>
-        <% for(let i = 0; i < Services.length; i++){ %>
-        <li>
-            <%= Services[i].typeOfService; %>
-            <%= Services[i].price; %>
-        </li>
-        <% } %>
-        </ul>
-
-
-
+    
 
 <div class="services">
-
-</div>
-
-
-
-
+        <ol>
+            <% for(let i = 0; i < Services.length; i++){ %>
+            <li>
+                <%= Services[i].typeOfService; %>
+                <%= Services[i].price; %>
+                <form action="/home/services/<%=Services[i].id; %>?_method=DELETE" method="POST">
+                    <input type="submit" value="DELETE"/>
+                        </form>
+                        <a href="/home/services/<%=Services[i].id; %>/edit">Edit</a>
+                            </li>
+                                <% } %>
+                                    </ol>
+                                        </div>
 
     
+
+
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

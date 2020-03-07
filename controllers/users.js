@@ -24,13 +24,7 @@ router.post("/", (req, res) => {  //@@@@
   });
 });
 
-// router.get("/secret", (req, res) => {
-//   if (res.session.currentUser) { //use res.session.currentUser to show page
-//     res.send(req.session.currentUser.username + "-this is a secret page")
-//   } else {
-//     res.redirect("/sessions/new")
-//   }
-// })
+
 
 
 

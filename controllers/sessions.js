@@ -14,17 +14,21 @@ router.get("/new", (req, res) => {
 });
 
 router.post("/", (req, res) => { //@@@@
-  User.findOne({ username: req.body.username }, (err, foundUser) => {
-    if (bcrypt.compareSync(req.body.password, foundUser.password)) {
+  User.findOne({ username: req.body.username.toLowerCase() }, (err, foundUser) => {
+    if (!foundUser) {
+      res.redirect("/home")
+    }
+    else { 
+      if (bcrypt.compareSync(req.body.password, foundUser.password)) {
       req.session.currentUser = foundUser;
-    //   res.send("user not found")
       res.redirect("/home");
     } else {
       res.send("wrong password");
       //or redirect to a wrongpass page
       // res.render("/session/new.ejs", {error: "wrong password try again"})
     }
-  });
+  }
+  })
 });
 
 router.delete("/", (req, res) => {

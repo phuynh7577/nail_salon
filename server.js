@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 const session = require("express-session");//@@@@@
 const methodOverride = require("method-override");
 
+//use public folder for static assets
+app.use(express.static("public"));
+
 app.use(express.urlencoded({ extended: true }));//@@@@@
 
 app.use(
@@ -32,7 +35,7 @@ app.get("/app", (req, res) => { //@@@@@@
 });
 
 app.get("/home", (req, res) => {
-    res.render("index.ejs", {
+    res.render("home.ejs", {
       currentUser: req.session.currentUser
     });
   });
@@ -49,6 +52,10 @@ app.use("/sessions", sessionsController);
 //controller
 const salonController = require('./controllers/salon.js');
 app.use('/home', salonController);
+
+//controller
+const brandController = require('./controllers/brand.js');
+app.use('/branduse', brandController);
 
 app.listen(3000, () => {
   console.log("listening...");
