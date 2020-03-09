@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
-  <title>Nail Salon</title>
+  <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>Hollywood Nail Salon</title>
 </head>
-
 <body>
-  <h1>Services</h1>
-  <a href="/home">Home</a>
+  
+  <div class="main-container">
 
-  <ul>
-    <% for(let i = 0; i < Services.length; i++){ %>
-    <li>
-      <a href="/home/services/<%=Services[i].id; %>"> <%=Services[i].typeOfService; %> </a> 
-        <p>$<%= Services[i].price %></p> 
-    </li>
-    <% } %>
-  </ul>
+      <div class="photo">
+        <img src="../images/something.jpg">
+      </div>
+    
+      <div class="right-side">
+          <nav>
+            <a href="/home">Home</a>
+            <a href="/home">Gallery</a>
+            <a href="/branduse/new/brands ">Brands</a>
+          </nav>
+<hr>
+          <div class="header">
+              <h1>Services We Offer</h1>
+          </div>    
+        
+          <div class="list">
+              <% for(let i = 0; i < Services.length; i++){ %>
+                <p><a href="/home/services/<%=Services[i].id; %>"> <%=Services[i].typeOfService; %>  $<%= Services[i].price %> </a></p>
+              <% } %>
+            </div>
+           
+
+      </div>
+
+    </div>
 </body>
 
 </html>

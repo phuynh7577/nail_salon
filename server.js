@@ -4,8 +4,10 @@ const mongoose = require("mongoose");
 const session = require("express-session");//@@@@@
 const methodOverride = require("method-override");
 
-//use public folder for static assets
+//use public folder for static assets......middleware
 app.use(express.static("public"));
+
+
 
 app.use(express.urlencoded({ extended: true }));//@@@@@
 

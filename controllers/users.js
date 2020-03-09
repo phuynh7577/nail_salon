@@ -3,9 +3,7 @@ const router = express.Router();
 const User = require("../models/users.js");
 const bcrypt = require("bcrypt");
 
-
-
-
+router.use(express.static("public"));
 
 
 router.get("/new", (req, res) => {

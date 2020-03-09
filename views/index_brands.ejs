@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
-  <title>Nail Salon</title>
+  <link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>Hollywood Nail Salon</title>
 </head>
 
 <body>
-  <h1>Brands We Use</h1>
-  <a href="/home">Home</a>
-  <a href="/home/index/services">Services</a>
+  
+  <div class="main-container">
 
-  <ul>
-    <% for(let i = 0; i < Brand.length; i++){ %>
-    <li>
-      <p><%=Brand[i].name; %> </p> 
-    </li>
-    <% } %>
-  </ul>
+      <div class="photo">
+        <img src="../images/powder.jpg">
+      </div>
+    
+      <div class="right-side">
+          <nav>
+            <a href="/home">Home</a>
+            <a href="/home">Gallery</a>
+            <a href="/home/new/services ">Services</a>
+          </nav>
+<hr>
+          <div class="header">
+              <h1>Brands We Love</h1>
+          </div>    
+        
+          
+
+          <div class="list">
+              <% for(let i = 0; i < Brand.length; i++){ %>
+                <p><%=Brand[i].name; %> </p> 
+              <% } %>
+            </div>
+              
+            
+      </div>
+
+    </div>
 </body>
 
 </html>

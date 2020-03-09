@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const Services = require('../models/services.js')
-const Brand = require('../models/brands.js')
 
+router.use(express.static("public"));
 
 
 //NEW
@@ -28,7 +28,6 @@ router.post("/", (req, res) => {
 // INDEX
 router.get("/index/services", (req, res) => {
     Services.find({}, (error, Services) => {
-      // res.send(fruits);
       res.render("index_services.ejs", { Services });
     });
   });

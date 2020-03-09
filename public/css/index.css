@@ -51,7 +51,7 @@ img {
 
 .right-side nav {
     margin-top: 5vh;
-    margin-bottom: 5vh;
+   
     color: #f6f4e6;
     display: flex;
     justify-content: space-evenly;
@@ -77,38 +77,22 @@ img {
 }
 
 .header {
+    font-family: "great vibes", sans-serif;
+    color: #f6f4e6;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.list p, a{
     font-family: "arimo", sans-serif;
     color: #f6f4e6;
-    font-weight: lighter;
-    margin-top: 5vh;
+    font-size: 20px;
 }
+
 
 hr {
     width: 80%;
     height: .5px;
-    
-}
-
-.quote p {
-    color: #f6f4e6;
-    font-family: "great vibes", sans-serif;
-    font-size: 25px;
-}
-
-.para {
-    margin-top: 10vh;
-    color: #f6f4e6;
-    font-weight: lighter;
-    font-size: smaller;
-}
-
-.para p {
-    margin: 0;
-}
-
-.para a, input {
-    font-weight: lighter;
-    font-size: smaller;
 }
 
 a:hover {

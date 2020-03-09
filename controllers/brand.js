@@ -3,11 +3,7 @@ const router = express.Router();
 
 const Brand = require('../models/brands.js')
 
-
-
-
-
-
+router.use(express.static("public"));
 
 
 
