@@ -1,0 +1,121 @@
+html {
+    background-color: #484A50;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+.main {
+    background-color: #484A50;
+    text-align: center;
+
+    padding-bottom: 4vh;
+}
+
+.services {
+    background-color: #484A50;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    justify-content: center;
+    
+    
+    
+}
+
+.services p {
+    color: #f6f4e6;
+    margin-bottom: 0;
+}
+
+.grid span {
+    color: #e7a61a;
+}
+
+.grid {
+    border: 1px solid #e7a61a;
+}
+
+
+
+.form {
+    margin-top: 5vh;
+}
+
+.form input {
+    border-radius: 4px;
+}
+
+.anchors {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.anchors a{
+    text-decoration: none;
+    color: #f6f4e6;
+    font-weight: 500;
+    margin-top: 3vh;
+    background-color: #e7a61a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.anchors a:hover {
+    color: #484A50;
+    text-decoration: none;
+}
+
+.grid a{
+    text-decoration: none;
+    color: #f6f4e6;
+    font-weight: 500;
+    margin-top: 3vh;
+    background-color: #e7a61a;
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+
+    margin-left: 2px;
+    
+}
+
+.grid a:hover {
+    color: #484A50;
+    text-decoration: none;
+}
+
+.grid input {
+    text-decoration: none;
+    color: #f6f4e6;
+    font-weight: 500;
+    margin-top: 3vh;
+    background-color: #e7a61a;
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+
+    margin-left: 2px;
+    margin-bottom: 2px;
+    margin-top: 3px;
+}
+
+.grid input:hover{
+    color: #484A50;
+}
+
+

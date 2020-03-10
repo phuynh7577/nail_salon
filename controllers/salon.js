@@ -32,6 +32,11 @@ router.get("/index/services", (req, res) => {
     });
   });
 
+  //index gallery
+  router.get("/index/gallery", (req, res) => {
+      res.render("index_gallery.ejs");
+  });
+
   // SHOW
   router.get("/services/:id", (req, res) => {
     Services.findById(req.params.id, (err, Services) => {

@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const session = require("express-session");//@@@@@
 const methodOverride = require("method-override");
+// require("dotenv").config() ==ask
 
 //use public folder for static assets......middleware
 app.use(express.static("public"));
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));//@@@@@
 
 app.use(
   session({
-    secret: "iamthebest", //some random string
+    secret: "iamironman", //some random string= process.env.SECRET
     resave: false,
     saveUninitialized: false
   })

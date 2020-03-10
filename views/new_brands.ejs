@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nail Salon</title>
+    <link rel="stylesheet" href="../css/new.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Add/Edit Brands</title>
 </head>
 <body>
     
-    <a href="/home">Home</a>
-    <a href="/branduse/index/brands">View</a>
-
-    <form action="/branduse" method="POST">
-        <input type="text" name="name" placeholder="Brand Name" />
-        <input type="submit" name="" value="Submit" />
-    </form>
-
+<div class="main">
+        <div class="anchors">
+            <a href="/home">Home</a>
+            <a href="/branduse/index/brands">View</a>
+        </div>
     
-
-<div class="brands">
-        <ol>
-            <% for(let i = 0; i < Brand.length; i++){ %>
-            <li>
-                <%= Brand[i].name; %>
-                <form action="/branduse/brands/<%=Brand[i].id; %>?_method=DELETE" method="POST">
-                    <input type="submit" value="DELETE"/>
-                        </form>
-                        <a href="/branduse/brands/<%=Brand[i].id; %>/edit">Edit</a>
-                            </li>
-                                <% } %>
-                                    </ol>
-                                        </div>
-
+        <div class="form">
+            <form action="/branduse" method="POST">
+                <input type="text" name="name" placeholder="Brand Name" />
+                <input type="submit" name="" value="Submit" />
+            </form>
+        </div>
+    </div>
     
+    
+    <div class="services">
+            
+                <% for(let i = 0; i < Brand.length; i++){ %>
+                <div class="grid">
+                    <p><%= Brand[i].name; %></p>
+                    
+                    <form action="/branduse/brands/<%=Brand[i].id; %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                    </form>
+                        
+                    <a href="/branduse/brands/<%=Brand[i].id; %>/edit">Edit</a>
+                </div>
+                    <% } %>
+                
+            </div>
+            
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                                            
 </body>
 </html>
