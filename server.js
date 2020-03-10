@@ -6,7 +6,9 @@ const mongoose = require("mongoose");
 const session = require("express-session");//@@@@@
 const methodOverride = require("method-override");
 
-
+const PORT = process.env.PORT
+const MONGODB_URI = process.env.MONGODB_URI
+const SECRET = process.env.SECRET
 
 //use public folder for static assets......middleware
 app.use(express.static("public"));
@@ -17,14 +19,14 @@ app.use(express.urlencoded({ extended: true }));//@@@@@
 
 app.use(
   session({
-    secret: process.env.SECRET,
+    secret: SECRET,
     resave: false,
     saveUninitialized: false
   })
 );
 app.use(methodOverride("_method"));
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -63,6 +65,6 @@ app.use('/home', salonController);
 const brandController = require('./controllers/brand.js');
 app.use('/branduse', brandController);
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("listening...");
 });
