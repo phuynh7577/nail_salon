@@ -1,9 +1,12 @@
+require("dotenv").config() 
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const session = require("express-session");//@@@@@
 const methodOverride = require("method-override");
-// require("dotenv").config() ==ask
+
+
 
 //use public folder for static assets......middleware
 app.use(express.static("public"));
@@ -14,14 +17,14 @@ app.use(express.urlencoded({ extended: true }));//@@@@@
 
 app.use(
   session({
-    secret: "iamironman", //some random string= process.env.SECRET
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false
   })
 );
 app.use(methodOverride("_method"));
 
-mongoose.connect("mongodb://localhost:27017/hollywood", {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -60,6 +63,6 @@ app.use('/home', salonController);
 const brandController = require('./controllers/brand.js');
 app.use('/branduse', brandController);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("listening...");
 });
