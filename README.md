@@ -39,3 +39,5 @@
 * Anyone that is not logged in, will only see information rendered to the site and unable to make any edits/deletes.
 
 ![Landing Page](/public/images/landingpage.jpg)
+
+..
